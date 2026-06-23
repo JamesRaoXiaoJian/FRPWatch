@@ -1,0 +1,16 @@
+[Unit]
+Description=FRP 设备在线状态监控
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/james/Project/FRPWatch
+ExecStart=/home/james/.local/bin/uv run monitor.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

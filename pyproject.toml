@@ -1,0 +1,13 @@
+[project]
+name = "frp-monitor"
+version = "0.1.0"
+description = "FRP 设备在线状态监控 — 监控 FRP Dashboard 中设备的上线/离线状态并通过 Gmail 发送提醒"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.34.2",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+frp-monitor = "monitor:main"
